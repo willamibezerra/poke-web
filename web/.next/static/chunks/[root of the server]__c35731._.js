@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__f1a7a3._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__c35731._.js", {
 
 "[turbopack]/browser/dev/hmr-client/websocket.ts [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -549,18 +549,86 @@ function triggerUpdate(msg) {
     }
 }
 }}),
-"[project]/web/styles/Home.module.css [client] (css module)": ((__turbopack_context__) => {
+"[project]/web/src/services/poke_api.tsx [client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "loadApi": (()=>loadApi)
+});
+async function loadApi(endpoint) {
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    console.log(data);
+    return data;
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/web/src/hooks/poke_hooks.tsx [client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "usePokemons": (()=>usePokemons)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$services$2f$poke_api$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/web/src/services/poke_api.tsx [client] (ecmascript)");
+var _s = __turbopack_refresh__.signature();
+;
+;
+const usePokemons = (endpoint)=>{
+    _s();
+    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "usePokemons.useEffect": ()=>{
+            const load = {
+                "usePokemons.useEffect.load": async ()=>{
+                    setLoading(true);
+                    try {
+                        const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$services$2f$poke_api$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["loadApi"])(endpoint);
+                        setData(response);
+                    } catch (error) {
+                        console.error('Erro ao carregar os dados:', error);
+                        setError('Erro ao carregar os dados');
+                    } finally{
+                        setLoading(false);
+                    }
+                }
+            }["usePokemons.useEffect.load"];
+            load();
+        }
+    }["usePokemons.useEffect"], [
+        endpoint
+    ]);
+    return {
+        pokemons: data?.results || [],
+        loading,
+        error
+    };
+};
+_s(usePokemons, "RiL7vLwmC7ZWXKL/bXt2EIBjBYk=");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/web/src/styles/Home.module.css [client] (css module)": ((__turbopack_context__) => {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: __turbopack_require_real__ } = __turbopack_context__;
 {
 __turbopack_export_value__({
-  "container": "Home-module__WvZpzG__container",
-  "pokemon-card": "Home-module__WvZpzG__pokemon-card",
-  "pokemon-image": "Home-module__WvZpzG__pokemon-image",
-  "pokemon-list": "Home-module__WvZpzG__pokemon-list",
+  "container": "Home-module__HjBSrW__container",
+  "pokemon-card": "Home-module__HjBSrW__pokemon-card",
+  "pokemon-image": "Home-module__HjBSrW__pokemon-image",
+  "pokemon-list": "Home-module__HjBSrW__pokemon-list",
 });
 }}),
-"[project]/web/pages/index.tsx [client] (ecmascript)": ((__turbopack_context__) => {
+"[project]/web/src/pages/index.tsx [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
@@ -569,109 +637,114 @@ __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/web/styles/Home.module.css [client] (css module)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$hooks$2f$poke_hooks$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/web/src/hooks/poke_hooks.tsx [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/web/src/styles/Home.module.css [client] (css module)");
+;
+var _s = __turbopack_refresh__.signature();
 ;
 ;
-const HomePage = ({ pokemons })=>{
-    const handleLike = (pokemon)=>{
-    // if (window.ReactNativeWebView) {
-    //   window.ReactNativeWebView.postMessage(
-    //     JSON.stringify({ action: 'like', pokemon })
-    //   );
-    // }
-    };
-    const handleDislike = (pokemon)=>{
-    // if (window.ReactNativeWebView) {
-    //   window.ReactNativeWebView.postMessage(
-    //     JSON.stringify({ action: 'dislike', pokemon })
-    //   );
-    // }
-    };
+const HomePage = ()=>{
+    _s();
+    const { pokemons, loading, error } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$hooks$2f$poke_hooks$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["usePokemons"])('https://pokeapi.co/api/v2/pokemon?limit=20');
+    if (loading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: "Carregando Pokémons..."
+        }, void 0, false, {
+            fileName: "[project]/web/src/pages/index.tsx",
+            lineNumber: 11,
+            columnNumber: 12
+        }, this);
+    }
+    if (error) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: [
+                "Ocorreu um erro: ",
+                error
+            ]
+        }, void 0, true, {
+            fileName: "[project]/web/src/pages/index.tsx",
+            lineNumber: 15,
+            columnNumber: 12
+        }, this);
+    }
+    // <div className={styles.container}>
+    // <h1>Pokémon List</h1>
+    // <div className={styles['pokemon-list']}>
+    //   {pokemons.map((pokemon) => (
+    //     <div key={pokemon.name} className={styles['pokemon-card']}>
+    //       <img
+    //         src={pokemon.image}
+    //         alt={pokemon.name}
+    //         className={styles['pokemon-image']}
+    //       />
+    //       <h3>{pokemon.name}</h3>
+    //       <p>Category: {pokemon.category}</p>
+    //       <p>Abilities: {pokemon.abilities.join(', ')}</p>
+    //       <button onClick={() => handleLike(pokemon)}>Like</button>
+    //       <button onClick={() => handleDislike(pokemon)}>Dislike</button>
+    //     </div>
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 children: "Pokémon List"
             }, void 0, false, {
-                fileName: "[project]/web/pages/index.tsx",
-                lineNumber: 26,
+                fileName: "[project]/web/src/pages/index.tsx",
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-list'],
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-list'],
                 children: pokemons.map((pokemon)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-card'],
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-card'],
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: pokemon.image,
                                 alt: pokemon.name,
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-image']
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-image']
                             }, void 0, false, {
-                                fileName: "[project]/web/pages/index.tsx",
-                                lineNumber: 30,
-                                columnNumber: 13
+                                fileName: "[project]/web/src/pages/index.tsx",
+                                lineNumber: 65,
+                                columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 children: pokemon.name
                             }, void 0, false, {
-                                fileName: "[project]/web/pages/index.tsx",
-                                lineNumber: 35,
+                                fileName: "[project]/web/src/pages/index.tsx",
+                                lineNumber: 70,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    "Category: ",
-                                    pokemon.category
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/web/pages/index.tsx",
-                                lineNumber: 36,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    "Abilities: ",
-                                    pokemon.abilities.join(', ')
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/web/pages/index.tsx",
-                                lineNumber: 37,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>handleLike(pokemon),
-                                children: "Like"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: pokemon.url,
+                                children: "Detalhes"
                             }, void 0, false, {
-                                fileName: "[project]/web/pages/index.tsx",
-                                lineNumber: 38,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>handleDislike(pokemon),
-                                children: "Dislike"
-                            }, void 0, false, {
-                                fileName: "[project]/web/pages/index.tsx",
-                                lineNumber: 39,
+                                fileName: "[project]/web/src/pages/index.tsx",
+                                lineNumber: 71,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, pokemon.name, true, {
-                        fileName: "[project]/web/pages/index.tsx",
-                        lineNumber: 29,
+                        fileName: "[project]/web/src/pages/index.tsx",
+                        lineNumber: 64,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
-                fileName: "[project]/web/pages/index.tsx",
-                lineNumber: 27,
+                fileName: "[project]/web/src/pages/index.tsx",
+                lineNumber: 62,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/web/pages/index.tsx",
-        lineNumber: 25,
+        fileName: "[project]/web/src/pages/index.tsx",
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 };
+_s(HomePage, "eRtlSyn0SRiJMEcYTsPB6HsYYXI=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$hooks$2f$poke_hooks$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["usePokemons"]
+    ];
+});
 _c = HomePage;
 const __TURBOPACK__default__export__ = HomePage;
 var _c;
@@ -680,7 +753,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[next]/entry/page-loader.ts { PAGE => \"[project]/web/pages/index.tsx [client] (ecmascript)\" } [client] (ecmascript)": (function(__turbopack_context__) {
+"[next]/entry/page-loader.ts { PAGE => \"[project]/web/src/pages/index.tsx [client] (ecmascript)\" } [client] (ecmascript)": (function(__turbopack_context__) {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, m: module, e: exports, t: __turbopack_require_real__ } = __turbopack_context__;
 {
@@ -688,7 +761,7 @@ const PAGE_PATH = "/";
 (window.__NEXT_P = window.__NEXT_P || []).push([
     PAGE_PATH,
     ()=>{
-        return __turbopack_require__("[project]/web/pages/index.tsx [client] (ecmascript)");
+        return __turbopack_require__("[project]/web/src/pages/index.tsx [client] (ecmascript)");
     }
 ]);
 // @ts-expect-error module.hot exists
@@ -701,13 +774,13 @@ if (module.hot) {
     });
 }
 }}),
-"[project]/web/pages/index (hmr-entry)": ((__turbopack_context__) => {
+"[project]/web/src/pages/index (hmr-entry)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, m: module, t: __turbopack_require_real__ } = __turbopack_context__;
 {
-__turbopack_require__("[next]/entry/page-loader.ts { PAGE => \"[project]/web/pages/index.tsx [client] (ecmascript)\" } [client] (ecmascript)");
+__turbopack_require__("[next]/entry/page-loader.ts { PAGE => \"[project]/web/src/pages/index.tsx [client] (ecmascript)\" } [client] (ecmascript)");
 }}),
 }]);
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__f1a7a3._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__c35731._.js.map
