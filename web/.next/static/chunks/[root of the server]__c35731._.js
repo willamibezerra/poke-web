@@ -592,6 +592,7 @@ const usePokemons = (endpoint)=>{
                     setLoading(true);
                     try {
                         const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$services$2f$poke_api$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["loadApi"])(endpoint);
+                        console.log(response);
                         setData(response);
                     } catch (error) {
                         console.error('Erro ao carregar os dados:', error);
@@ -638,7 +639,7 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$hooks$2f$poke_hooks$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/web/src/hooks/poke_hooks.tsx [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/web/src/styles/Home.module.css [client] (css module)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/web/src/styles/Home.module.css [client] (css module)"); // Certifique-se de que o CSS já está configurado corretamente.
 ;
 var _s = __turbopack_refresh__.signature();
 ;
@@ -651,7 +652,7 @@ const HomePage = ()=>{
             children: "Carregando Pokémons..."
         }, void 0, false, {
             fileName: "[project]/web/src/pages/index.tsx",
-            lineNumber: 11,
+            lineNumber: 14,
             columnNumber: 12
         }, this);
     }
@@ -663,26 +664,10 @@ const HomePage = ()=>{
             ]
         }, void 0, true, {
             fileName: "[project]/web/src/pages/index.tsx",
-            lineNumber: 15,
+            lineNumber: 18,
             columnNumber: 12
         }, this);
     }
-    // <div className={styles.container}>
-    // <h1>Pokémon List</h1>
-    // <div className={styles['pokemon-list']}>
-    //   {pokemons.map((pokemon) => (
-    //     <div key={pokemon.name} className={styles['pokemon-card']}>
-    //       <img
-    //         src={pokemon.image}
-    //         alt={pokemon.name}
-    //         className={styles['pokemon-image']}
-    //       />
-    //       <h3>{pokemon.name}</h3>
-    //       <p>Category: {pokemon.category}</p>
-    //       <p>Abilities: {pokemon.abilities.join(', ')}</p>
-    //       <button onClick={() => handleLike(pokemon)}>Like</button>
-    //       <button onClick={() => handleDislike(pokemon)}>Dislike</button>
-    //     </div>
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
         children: [
@@ -690,7 +675,7 @@ const HomePage = ()=>{
                 children: "Pokémon List"
             }, void 0, false, {
                 fileName: "[project]/web/src/pages/index.tsx",
-                lineNumber: 61,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -704,39 +689,67 @@ const HomePage = ()=>{
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-image']
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 65,
-                                columnNumber: 21
+                                lineNumber: 27,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 children: pokemon.name
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 70,
+                                lineNumber: 32,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: pokemon.url,
-                                children: "Detalhes"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    "Category: ",
+                                    pokemon.category
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/web/src/pages/index.tsx",
+                                lineNumber: 33,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    "Abilities: ",
+                                    pokemon.abilities
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/web/src/pages/index.tsx",
+                                lineNumber: 34,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>" handleLike(pokemon)",
+                                children: "Like"
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 71,
+                                lineNumber: 35,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>" handleDislike(pokemon)",
+                                children: "Dislike"
+                            }, void 0, false, {
+                                fileName: "[project]/web/src/pages/index.tsx",
+                                lineNumber: 38,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, pokemon.name, true, {
                         fileName: "[project]/web/src/pages/index.tsx",
-                        lineNumber: 64,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/web/src/pages/index.tsx",
-                lineNumber: 62,
+                lineNumber: 24,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/web/src/pages/index.tsx",
-        lineNumber: 60,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 };

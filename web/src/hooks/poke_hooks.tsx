@@ -12,7 +12,7 @@ export const usePokemons = (endpoint: string) => {
       setLoading(true);
       try {
         const response = await loadApi(endpoint); 
-     
+     console.log(response);
         setData(response); 
       } catch (error) {
         console.error('Erro ao carregar os dados:', error); 

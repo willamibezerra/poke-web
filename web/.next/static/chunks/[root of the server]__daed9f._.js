@@ -565,19 +565,14 @@ __turbopack_export_value__({
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
+//import { usePokemons } from '../hooks/poke_hooks';
 __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module '../hooks/usePokemons'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
 var __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_import__("[project]/web/src/styles/Home.module.css [client] (css module)"); // Certifique-se de que o CSS já está configurado corretamente.
 ;
 var _s = __turbopack_refresh__.signature();
-;
 ;
 const HomePage = ()=>{
     _s();
@@ -587,7 +582,7 @@ const HomePage = ()=>{
             children: "Carregando Pokémons..."
         }, void 0, false, {
             fileName: "[project]/web/src/pages/index.tsx",
-            lineNumber: 12,
+            lineNumber: 14,
             columnNumber: 12
         }, this);
     }
@@ -599,7 +594,7 @@ const HomePage = ()=>{
             ]
         }, void 0, true, {
             fileName: "[project]/web/src/pages/index.tsx",
-            lineNumber: 16,
+            lineNumber: 18,
             columnNumber: 12
         }, this);
     }
@@ -610,7 +605,7 @@ const HomePage = ()=>{
                 children: "Pokémon List"
             }, void 0, false, {
                 fileName: "[project]/web/src/pages/index.tsx",
-                lineNumber: 21,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -624,14 +619,14 @@ const HomePage = ()=>{
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$web$2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"]['pokemon-image']
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 25,
+                                lineNumber: 27,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 children: pokemon.name
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 30,
+                                lineNumber: 32,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -641,7 +636,7 @@ const HomePage = ()=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 31,
+                                lineNumber: 33,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -651,7 +646,7 @@ const HomePage = ()=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 32,
+                                lineNumber: 34,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -659,7 +654,7 @@ const HomePage = ()=>{
                                 children: "Like"
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 33,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -667,32 +662,28 @@ const HomePage = ()=>{
                                 children: "Dislike"
                             }, void 0, false, {
                                 fileName: "[project]/web/src/pages/index.tsx",
-                                lineNumber: 34,
+                                lineNumber: 36,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, pokemon.name, true, {
                         fileName: "[project]/web/src/pages/index.tsx",
-                        lineNumber: 24,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/web/src/pages/index.tsx",
-                lineNumber: 22,
+                lineNumber: 24,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/web/src/pages/index.tsx",
-        lineNumber: 20,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 };
-_s(HomePage, "eRtlSyn0SRiJMEcYTsPB6HsYYXI=", false, function() {
-    return [
-        usePokemons
-    ];
-});
+_s(HomePage, "eRtlSyn0SRiJMEcYTsPB6HsYYXI=", true);
 _c = HomePage;
 const __TURBOPACK__default__export__ = HomePage;
 var _c;
