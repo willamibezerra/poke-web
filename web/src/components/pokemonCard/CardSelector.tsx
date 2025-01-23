@@ -29,8 +29,7 @@ export default function PokemonCard({ pokemon, onLike, onDislike }: PokemonCardP
 
   return (
     <div className={styles.card}>
-      <Link href={`/pokemon/${data?.id}`}>
-       
+    
           <div className={styles.sprite}>
             {data?.sprites.front_default ? (
               <Image
@@ -58,12 +57,14 @@ export default function PokemonCard({ pokemon, onLike, onDislike }: PokemonCardP
               <span key={type.type.name} className={styles[type.type.name]}>
                 {type.type.name}
               </span>
-            ))}
+            ),)}
+            
           </div>
        
-      </Link>
+   
       <div className={styles.actions}>
         <button onClick={handleLike} className={styles.likeButton}>👍 Like</button>
+
         <button onClick={handleDislike} className={styles.dislikeButton}>👎 Dislike</button>
       </div>
     </div>
