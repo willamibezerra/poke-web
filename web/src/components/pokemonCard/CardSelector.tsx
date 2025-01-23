@@ -3,12 +3,11 @@ import Link from 'next/link'
 
 
 import usePokemon from '../../hooks/usePokemon';
-import { IpokeApi } from '../../types/poke_interface';
 
 import styles from "../../styles/Home.module.css";
 
 type PokemonCardProps = {
-  pokemon: { name: string; id: number };
+  pokemon: { name: string; };
   onLike: (pokemonName: string) => void;  
   onDislike: (pokemonName: string) => void; 
 };
@@ -31,7 +30,9 @@ export default function PokemonCard({ pokemon, onLike, onDislike }: PokemonCardP
     <div className={styles.card}>
     
           <div className={styles.sprite}>
-            {data?.sprites.front_default ? (
+            {
+           
+             (
               <Image
                 width={72}
                 height={72}
@@ -40,16 +41,9 @@ export default function PokemonCard({ pokemon, onLike, onDislike }: PokemonCardP
                 src={data.sprites.front_default}
                 quality={100}
               />
-            ) : (
-              <Image
-                width={52}
-                height={52}
-                alt={`Imagem não encontrada`}
-                title={`Imagem não encontrada`}
-                src="/placeholder.png"
-                quality={100}
-              />
-            )}
+            ) 
+
+            }
           </div>
           <h2>{data?.name}</h2>
           <div className={styles.types}>

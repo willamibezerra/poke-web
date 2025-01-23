@@ -257,14 +257,14 @@ function PokemonCard({ pokemon, onLike, onDislike }) {
         children: "Carregando..."
     }, void 0, false, {
         fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-        lineNumber: 19,
+        lineNumber: 18,
         columnNumber: 25
     }, this);
     if (error) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
         children: "Erro ao carregar Pokémon"
     }, void 0, false, {
         fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-        lineNumber: 20,
+        lineNumber: 19,
         columnNumber: 21
     }, this);
     const handleLike = ()=>{
@@ -278,7 +278,7 @@ function PokemonCard({ pokemon, onLike, onDislike }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].sprite,
-                children: data?.sprites.front_default ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                     width: 72,
                     height: 72,
                     alt: data.name,
@@ -287,30 +287,19 @@ function PokemonCard({ pokemon, onLike, onDislike }) {
                     quality: 100
                 }, void 0, false, {
                     fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                    lineNumber: 35,
-                    columnNumber: 15
-                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    width: 52,
-                    height: 52,
-                    alt: `Imagem não encontrada`,
-                    title: `Imagem não encontrada`,
-                    src: "/placeholder.png",
-                    quality: 100
-                }, void 0, false, {
-                    fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                    lineNumber: 44,
+                    lineNumber: 36,
                     columnNumber: 15
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 11
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
                 children: data?.name
             }, void 0, false, {
                 fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                lineNumber: 54,
+                lineNumber: 48,
                 columnNumber: 11
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -320,12 +309,12 @@ function PokemonCard({ pokemon, onLike, onDislike }) {
                         children: type.type.name
                     }, type.type.name, false, {
                         fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                        lineNumber: 57,
+                        lineNumber: 51,
                         columnNumber: 15
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                lineNumber: 55,
+                lineNumber: 49,
                 columnNumber: 11
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -337,7 +326,7 @@ function PokemonCard({ pokemon, onLike, onDislike }) {
                         children: "👍 Like"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                        lineNumber: 66,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -346,19 +335,19 @@ function PokemonCard({ pokemon, onLike, onDislike }) {
                         children: "👎 Dislike"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                        lineNumber: 68,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-                lineNumber: 65,
+                lineNumber: 59,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/pokemonCard/CardSelector.tsx",
-        lineNumber: 31,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }
@@ -563,7 +552,13 @@ const HomePage = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].pokemonGrid,
                         children: data?.results.map((pokemon)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pokemonCard$2f$CardSelector$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                pokemon: pokemon
+                                pokemon: pokemon,
+                                onLike: function(pokemonName) {
+                                    throw new Error('Function not implemented.');
+                                },
+                                onDislike: function(pokemonName) {
+                                    throw new Error('Function not implemented.');
+                                }
                             }, pokemon.name, false, {
                                 fileName: "[project]/src/pages/index.tsx",
                                 lineNumber: 28,
@@ -583,7 +578,7 @@ const HomePage = ()=>{
                                 children: "Página Anterior"
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.tsx",
-                                lineNumber: 32,
+                                lineNumber: 36,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -593,13 +588,13 @@ const HomePage = ()=>{
                                 children: "Próxima Página"
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.tsx",
-                                lineNumber: 38,
+                                lineNumber: 42,
                                 columnNumber: 5
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/pages/index.tsx",
-                        lineNumber: 31,
+                        lineNumber: 35,
                         columnNumber: 3
                     }, this)
                 ]

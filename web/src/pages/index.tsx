@@ -25,7 +25,11 @@ const HomePage: React.FC = () => {
   <h1 className={styles.title}>Pokédex</h1>
   <div className={styles.pokemonGrid}>
     {data?.results.map((pokemon) => (
-      <PokemonCard key={pokemon.name} pokemon={pokemon} />
+      <PokemonCard key={pokemon.name} pokemon={pokemon} onLike={function (pokemonName: string): void {
+        throw new Error('Function not implemented.');
+      } } onDislike={function (pokemonName: string): void {
+        throw new Error('Function not implemented.');
+      } } />
     ))}
   </div>
   <div >
