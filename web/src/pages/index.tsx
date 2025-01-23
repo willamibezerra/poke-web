@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 import { Ipokemon } from '../types/pokemon';
 import styles from '../styles/Home.module.css'; 
 import usePokemonList from '../hooks/usePokemonList';
-import PokemonCard from '../components/PokemonCard/CardSelector';
-import SEO from '../components/SEO';
+import PokemonCard from '../components/pokemonCard/CardSelector';
+
 
 
 const HomePage: React.FC = () => {

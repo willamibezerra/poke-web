@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+// @ts-check
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+/**
+ * @type {import('next').NextConfig}
+ * */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig

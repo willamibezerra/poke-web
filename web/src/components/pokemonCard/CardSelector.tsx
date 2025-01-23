@@ -5,7 +5,8 @@ import Link from 'next/link'
 import usePokemon from '../../hooks/usePokemon';
 import { IpokeApi } from '../../types/poke_interface';
 
-import styles from '../../styles/Card.module.css';
+import styles from "../../styles/Home.module.css";
+
 type PokemonCardProps = {
   pokemon: { name: string; id: number };
   onLike: (pokemonName: string) => void;  
