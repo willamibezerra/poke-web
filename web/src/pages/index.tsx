@@ -25,9 +25,12 @@ const HomePage: React.FC = () => {
   <div className={styles.pokemonGrid}>
     {data?.results.map((pokemon) => (
       <PokemonCard key={pokemon.name} pokemon={pokemon} onLike={function (pokemonName: string): void {
-        window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'like', pokemonName }));
+        console.log(pokemonName);
+
+   //     window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'like', pokemonName }));
       } } onDislike={function (pokemonName: string): void {
-        window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'dislike', pokemonName }));
+        console.log(pokemonName);
+      //  window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'dislike', pokemonName }));
       } } />
     ))}
   </div>
