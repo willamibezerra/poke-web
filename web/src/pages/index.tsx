@@ -5,7 +5,7 @@ import {  useState } from 'react'
 import styles from '../styles/Home.module.css'; 
 import usePokemonList from '../hooks/usePokemonList';
 import PokemonCard from '../components/pokemonCard/CardSelector';
-import SEO from '../components/SEO';
+
 
 
 
@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
 
   return (
    <>
-   <SEO title="Pokédex" />
+ 
 
 <div className={styles.container}>
   <h1 className={styles.title}>Pokédex</h1>
