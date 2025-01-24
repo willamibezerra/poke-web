@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
  
 
 <div className={styles.container}>
-  <h1 className={styles.title}>Pokédex</h1>
+
   <div className={styles.pokemonGrid}>
     {data?.results.map((pokemon) => (
       <PokemonCard key={pokemon.name} pokemon={pokemon} onLike={function (pokemonName: string): void {
