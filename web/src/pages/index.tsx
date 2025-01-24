@@ -5,7 +5,7 @@ import {  useState } from 'react'
 import styles from '../styles/Home.module.css'; 
 import usePokemonList from '../hooks/usePokemonList';
 import PokemonCard from '../components/pokemonCard/CardSelector';
-import SEO from '../components/SEO';
+
 
 
 
@@ -18,16 +18,16 @@ const HomePage: React.FC = () => {
 
   return (
    <>
-   <SEO title="Pokédex" />
+ 
 
 <div className={styles.container}>
   <h1 className={styles.title}>Pokédex</h1>
   <div className={styles.pokemonGrid}>
     {data?.results.map((pokemon) => (
       <PokemonCard key={pokemon.name} pokemon={pokemon} onLike={function (pokemonName: string): void {
-        throw new Error(pokemonName);
+        window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'like', pokemonName }));
       } } onDislike={function (pokemonName: string): void {
-        throw new Error(pokemonName);
+        window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'dislike', pokemonName }));
       } } />
     ))}
   </div>
