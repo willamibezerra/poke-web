@@ -25,7 +25,10 @@ const HomeScreen = () => {
     <View style={{ flex: 1 }}>
       <Text style={styles.header}>Lista de Pokémon</Text>
       <WebView
-        source={{ uri: 'https://poke-web-xi.vercel.app/' }}
+        source={{ uri: 'https://poke-g403669rq-willamibezerras-projects.vercel.app/' }}
+        injectedJavaScript={`
+          window.ReactNativeWebView = window.ReactNativeWebView || {};
+        `}
         
         style={{ marginTop: 20 }}
         onMessage={handleMessage}
