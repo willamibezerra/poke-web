@@ -27,10 +27,12 @@ const HomePage: React.FC = () => {
       <PokemonCard key={pokemon.name} pokemon={pokemon} onLike={function (pokemonName: string): void {
         console.log(pokemonName);
 
-        window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'like', pokemonName }));
+        (window as any).ReactNativeWebView?.postMessage(JSON.stringify({ type: 'like', pokemonName }));
+        
       } } onDislike={function (pokemonName: string): void {
         console.log(pokemonName);
-       window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'dislike', pokemonName }));
+        (window as any).ReactNativeWebView?.postMessage(JSON.stringify({ type: 'deslike', pokemonName }));
+
       } } />
     ))}
   </div>
