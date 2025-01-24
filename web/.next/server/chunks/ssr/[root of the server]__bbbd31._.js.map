@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 65, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/willa/Documents/poke-web/web/web/src/pages/_app.tsx"],"sourcesContent":["import { QueryClient, QueryClientProvider } from '@tanstack/react-query';\r\n\r\nimport type { AppProps } from 'next/app';\r\n\r\n\r\n\r\nconst queryClient = new QueryClient();\r\n\r\nexport default function App({ Component, pageProps }: AppProps) {\r\n  return (\r\n   \r\n    <QueryClientProvider client={queryClient}>\r\n      <Component {...pageProps} />\r\n      {/* React Query DevTools (opcional para debugging) */}\r\n     \r\n    </QueryClientProvider>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;;;;;;AAMA,MAAM,cAAc,IAAI,wJAAA,CAAA,cAAW;AAEpB,SAAS,IAAI,EAAE,SAAS,EAAE,SAAS,EAAY;IAC5D,qBAEE,qKAAC,wJAAA,CAAA,sBAAmB;QAAC,QAAQ;kBAC3B,cAAA,qKAAC;YAAW,GAAG,SAAS;;;;;;;;;;;AAK9B"}},
-    {"offset": {"line": 93, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

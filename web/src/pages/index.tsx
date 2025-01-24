@@ -1,8 +1,7 @@
 
 
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 
-import { Ipokemon } from '../types/pokemon';
 import styles from '../styles/Home.module.css'; 
 import usePokemonList from '../hooks/usePokemonList';
 import PokemonCard from '../components/pokemonCard/CardSelector';
@@ -26,9 +25,9 @@ const HomePage: React.FC = () => {
   <div className={styles.pokemonGrid}>
     {data?.results.map((pokemon) => (
       <PokemonCard key={pokemon.name} pokemon={pokemon} onLike={function (pokemonName: string): void {
-        throw new Error('Function not implemented.');
+        throw new Error(pokemonName);
       } } onDislike={function (pokemonName: string): void {
-        throw new Error('Function not implemented.');
+        throw new Error(pokemonName);
       } } />
     ))}
   </div>
@@ -40,7 +39,7 @@ const HomePage: React.FC = () => {
       Página Anterior
     </button>
     <button className={styles.buttonPagination}
-      disabled={page * 60 >= data.count}
+      disabled={page * 60 >= data!.count}
       onClick={() => setPage((prev) => prev + 1)}
     >
       Próxima Página

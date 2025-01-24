@@ -35,9 +35,9 @@ export default function PokemonCard({ pokemon, onLike, onDislike }: PokemonCardP
               <Image
                 width={72}
                 height={72}
-                alt={data.name}
-                title={data.name}
-                src={data.sprites.front_default}
+                alt={data!.name}
+                title={data!.name}
+                src={data!.sprites.front_default}
                 quality={100}
               />
             ) 

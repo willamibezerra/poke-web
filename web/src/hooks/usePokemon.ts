@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import { loadApi } from '../services/poke_api';
-import { IpokeApiResponse } from '../types/poke_api_interface';
+
 import api from '../services/axios'
 import { Ipokemon } from '../types/pokemon';
 import { useQuery } from '@tanstack/react-query';
