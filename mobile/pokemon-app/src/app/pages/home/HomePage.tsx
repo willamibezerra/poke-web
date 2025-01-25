@@ -14,7 +14,7 @@ const HomeScreen = () => {
 
       if (data.type === 'like') {
         addFavorite(data.pokemonName);
-      } else if (data.type === 'dislike') {
+      } else if (data.type === 'deslike') {
         removeFavorite(data.pokemonName);
       }
     } catch (error) {
