@@ -24,7 +24,7 @@ npm install
 
 4. Executando a aplicação
 Para rodar a API localmente, use o comando:
- npm run dex
+ npm run dev
 
 5. Testes
 Para rodar os testes (caso você tenha o Jest configurado), use o comando:
