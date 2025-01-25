@@ -1,35 +1,46 @@
-import { Tabs } from 'expo-router';
-import useFavorites from '../../hooks/UseFavorites';
-
-
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+
+// Importação das telas
+import HomePage from './HomePage';
+import FavoritesPage from './FavoritesPage';
 import { useFavoritesContext } from '@/src/components/contexts/favoriteContext';
+
+const Tab = createBottomTabNavigator();
 
 export default function TabLayout() {
   const { favorites } = useFavoritesContext();
-
   return (
-    <Tabs
+    <Tab.Navigator
       screenOptions={{
         headerShown: false,
+        tabBarShowLabel: false,
+
       }}
     >
-      <Tabs.Screen
-        name="home"
+      <Tab.Screen
+        name="Home"
+        component={HomePage}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="home-outline" size={24} color={color} />
+          ),
         }}
       />
-      <Tabs.Screen
-        name="favorites"
+
+      <Tab.Screen
+        name="Favorites"
+        component={FavoritesPage}
         options={{
-          title: 'Favoritos',
-          tabBarIcon: ({ color }) => <Ionicons name="heart" size={24} color={color} />,
-          tabBarBadge: favorites.length > 0 ? favorites.length : undefined,
+          tabBarBadge :favorites.length > 0 ? favorites.length: '',
           
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="heart-outline" size={24} color={color} />
+            
+          ),
         }}
       />
-    </Tabs>
+    </Tab.Navigator>
   );
 }
