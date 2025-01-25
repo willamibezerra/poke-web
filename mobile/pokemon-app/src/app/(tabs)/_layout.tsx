@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
 // Importação das telas
-import HomePage from './HomePage';
-import FavoritesPage from './FavoritesPage';
+import HomePage from '../pages/home/HomePage';
+import FavoritesPage from '../pages/favorites/FavoritesPage';
 import { useFavoritesContext } from '@/src/components/contexts/favoriteContext';
 
 const Tab = createBottomTabNavigator();
@@ -33,11 +33,11 @@ export default function TabLayout() {
         name="Favorites"
         component={FavoritesPage}
         options={{
-          tabBarBadge :favorites.length > 0 ? favorites.length: '',
-          
+          tabBarBadge: favorites.length > 0 ? favorites.length : '',
+
           tabBarIcon: ({ color }) => (
             <Ionicons name="heart-outline" size={24} color={color} />
-            
+
           ),
         }}
       />

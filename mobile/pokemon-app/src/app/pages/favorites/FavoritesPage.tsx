@@ -16,7 +16,7 @@ export default function FavoritesScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Título */}
+     
       <Text style={styles.title}>Pokémons Favoritos</Text>
 
       <FlatList
@@ -40,7 +40,7 @@ export default function FavoritesScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#F5F5F5", 
+    backgroundColor: "#F5F5F5",
     paddingHorizontal: 16,
     paddingTop: 20,
   },
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   itemContainer: {
-    marginHorizontal :8,
+    marginHorizontal: 8,
     backgroundColor: "#FFF",
     borderRadius: 12,
     padding: 16,
