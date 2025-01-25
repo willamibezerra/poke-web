@@ -3,9 +3,10 @@ import useFavorites from '../../hooks/UseFavorites';
 
 
 import { Ionicons } from '@expo/vector-icons';
+import { useFavoritesContext } from '@/src/components/contexts/favoriteContext';
 
 export default function TabLayout() {
-  const { favorites } = useFavorites();
+  const { favorites } = useFavoritesContext();
 
   return (
     <Tabs

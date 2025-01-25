@@ -1,1 +1,5 @@
-(()=>{var e={};e.id=636,e.ids=[636],e.modules={7954:(e,r,t)=>{"use strict";t.a(e,async(e,s)=>{try{t.r(r),t.d(r,{default:()=>u});var a=t(8732),i=t(8462);t(9361);var c=e([i]);let n=new(i=(c.then?(await c)():c)[0]).QueryClient;function u({Component:e,pageProps:r}){return(0,a.jsx)(i.QueryClientProvider,{client:n,children:(0,a.jsx)("div",{className:"bg-gray-500",children:(0,a.jsx)(e,{...r})})})}s()}catch(e){s(e)}})},9361:()=>{},8732:e=>{"use strict";e.exports=require("react/jsx-runtime")},8462:e=>{"use strict";e.exports=import("@tanstack/react-query")}};var r=require("../webpack-runtime.js");r.C(e);var t=r(r.s=7954);module.exports=t})();
+const CHUNK_PUBLIC_PATH = "server/pages/_app.js";
+const runtime = require("../chunks/ssr/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__a63df0._.js");
+runtime.loadChunk("server/chunks/ssr/src_styles_globals_070f83.css");
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/src/pages/_app.tsx [ssr] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

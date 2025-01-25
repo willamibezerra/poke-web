@@ -1,11 +1,12 @@
-// src/screens/HomeScreen.tsx
+
+import { useFavoritesContext } from '@/src/components/contexts/favoriteContext';
 import useFavorites from '../../hooks/UseFavorites';
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const HomeScreen = () => {
-  const { addFavorite, removeFavorite } = useFavorites();
+  const { addFavorite, removeFavorite } = useFavoritesContext();
 
   const handleMessage = (event: any) => {
     try {
@@ -23,7 +24,10 @@ const HomeScreen = () => {
 
   return (
     <View style={{ flex: 1 }}>
+      <SafeAreaView>
+
       <Text style={styles.header}>Lista de Pokémon</Text>
+      </SafeAreaView>
       <WebView
         source={{ uri: 'https://poke-web-xi.vercel.app/' }}
         injectedJavaScript={`

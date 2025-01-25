@@ -1,35 +1,24 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from 'react';
+import useFavorites from '@/src/hooks/UseFavorites';
 
-type FavoritesContextType = {
-  favorites: string[];
-  addFavorite: (pokemonName: string) => void;
-  removeFavorite: (pokemonName: string) => void;
-};
+// Cria o contexto
+const FavoritesContext = createContext<ReturnType<typeof useFavorites> | null>(null);
 
-const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
-
+// Provedor do contexto
 export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [favorites, setFavorites] = useState<string[]>([]);
-
-  const addFavorite = (pokemonName: string) => {
-    setFavorites((prev) => [...prev, pokemonName]);
-  };
-
-  const removeFavorite = (pokemonName: string) => {
-    setFavorites((prev) => prev.filter((name) => name !== pokemonName));
-  };
-
+  const favoritesHook = useFavorites(); // Usa o hook
   return (
-    <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
+    <FavoritesContext.Provider value={favoritesHook}>
       {children}
     </FavoritesContext.Provider>
   );
 };
 
+// Hook para acessar o contexto
 export const useFavoritesContext = () => {
   const context = useContext(FavoritesContext);
   if (!context) {
-    throw new Error("useFavoritesContext must be used within a FavoritesProvider");
+    throw new Error('useFavoritesContext deve ser usado dentro de FavoritesProvider');
   }
-  return context;
+  return context;
 };
