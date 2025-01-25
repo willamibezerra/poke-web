@@ -26,6 +26,7 @@ export default function TabLayout() {
           title: 'Favoritos',
           tabBarIcon: ({ color }) => <Ionicons name="heart" size={24} color={color} />,
           tabBarBadge: favorites.length > 0 ? favorites.length : undefined,
+          
         }}
       />
     </Tabs>

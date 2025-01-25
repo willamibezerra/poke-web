@@ -1,47 +1,41 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList, Button } from 'react-native';
-import useFavorites from '../../hooks/UseFavorites';
+import React from "react";
+import { View, Text, FlatList, Button, StyleSheet } from "react-native";
+import { useFavoritesContext } from "../../components/contexts/favoriteContext";
 
-
-export default function FavoritesPage() {
-  const { favorites, removeFavorite } = useFavorites();
+export default function FavoritesScreen() {
+  const { favorites, removeFavorite } = useFavoritesContext();
 
   if (favorites.length === 0) {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Nenhum Pokémon favorito ainda!</Text>
+        <Text>Você ainda não tem Pokémon favoritos.</Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={favorites}
-        keyExtractor={(item) => item}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text style={styles.text}>{item}</Text>
-            <Button title="Dislike" onPress={() => removeFavorite(item)} />
-          </View>
-        )}
-      />
-    </View>
+    <FlatList
+      data={favorites}
+      keyExtractor={(item) => item}
+      renderItem={({ item }) => (
+        <View style={styles.item}>
+          <Text>{item}</Text>
+          <Button title="Desfavoritar" onPress={() => removeFavorite(item)} />
+        </View>
+      )}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#fff',
+    justifyContent: "center",
+    alignItems: "center",
   },
   item: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 12,
-  },
-  text: {
-    fontSize: 18,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginVertical: 10,
   },
 });

@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 const AppLayout = () => {
   return (
 
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator screenOptions={{ headerShown: false,  }}>
         {}
         <Stack.Screen name="Main" component={TabsLayout} />
       </Stack.Navigator>
